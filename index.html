@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="hi" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Radha Naam Jap Counter: Online Digital Mala & Mantra Counting App | Radhe Radhe</title>
+    <meta name="description" content="Use Radha Naam Jap Counter App for daily chanting & meditation. Track your Radhe Radhe, Hare Krishna mantra japa with a digital tala. Easy Vrindavan bhakti app for counting names of Radha Rani.">
+    <meta name="keywords" content="Radha Naam Jap, Radha Naam Jap Counter, Radhe Radhe Jaap App, Digital Mala 108, Mantra Counting App India, Radha Krishna Japa Tracker, Online Naam Jap Tool, Chanting Counter App, Tally Counter Bhakti">
+    
+    <link rel="canonical" href="https://vikramkewat.github.io/radha-naam-jap-counter/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Radha Naam Jap Counter: Your Digital Mala for Daily Chanting" />
+    <meta property="og:description" content="Experience peace. Count your Radha-Krishna mantras with our beautiful and easy-to-use Digital Japa Mala app." />
+    <meta property="og:url" content="https://vikramkewat.github.io/radha-naam-jap-counter/" />
+    <meta property="og:image" content="https://play-lh.googleusercontent.com/gK9wP3jP4V7Y8E8U7M4H-q68494R951X0L7Q935YjH6v4vVjF8H-P9K1G9Y9C-YwR9I=w480-h960-rw" /> 
+    
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        radha: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            800: '#92400e',
+                            900: '#78350f',
+                        },
+                    },
+                    fontFamily: {
+                        'hindi': ['Tiro Devanagari Hindi', 'serif'],
+                        'sans': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Radha Naam Jap Counter",
+      "operatingSystem": "ANDROID",
+      "applicationCategory": "Bhakti/Spirituality Application",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "120"
+      },
+      "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": "https://schema.org/DownloadAction",
+        "userInteractionCount": "15000"
+      }
+    }
+    </script>
+
+    <style>
+        .font-hindi { font-family: 'Tiro Devanagari Hindi', serif; }
+        
+        #snowflakeContainer {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 100;
+        }
+        .snowflake {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-10px) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.8; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        body {
+            background-color: #fefcf3;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23fbbf24' fill-opacity='0.05'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43 0c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm29 22c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM32 29c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm13 54c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM15 50c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm3 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM6 6c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM45 5c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm1 31c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm3 40c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM31 6c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm3 17c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM75 14c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM73 43c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM1 1c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM9 90c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM21 70c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM20 50c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM2 30c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM3 10c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM3 3c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm81 40c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-12 10c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM80 80c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM8 80c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM90 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM80 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 90c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM50 80c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM50 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM80 50c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM80 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM70 30c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 80c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 50c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM50 50c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM40 80c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM40 50c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM40 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM30 80c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM30 50c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM30 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM20 80c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM20 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM10 80c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM10 50c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM10 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM0 80c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM0 50c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM0 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM80 0c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM70 0c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 0c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM50 0c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM40 0c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM30 0c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM20 0c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM10 0c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM0 0c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .divine-border {
+            border: 4px solid #f59e0b;
+            border-style: double;
+            border-radius: 20px;
+        }
+
+        /* YouTube Shorts Container: 9:16 aspect ratio (Mobile Optimized) */
+        .shorts-container {
+            position: relative;
+            padding-bottom: 177.77%; /* 9:16 Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 320px; /* Limit width for shorts */
+            margin: 0 auto;
+        }
+        .shorts-container iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-radha-900 overflow-x-hidden">
+
+    <div id="snowflakeContainer"></div>
+
+    <nav class="bg-radha-100 p-4 border-b-2 border-radha-200">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold font-hindi text-radha-800">श्री राधा नाम जप</h1>
+            <a href="https://play.google.com/store/apps/details?id=com.spiritual.japamala.tally.tasbih.chanting.counter" target="_blank" class="bg-radha-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-radha-700 transition">Download App</a>
+        </div>
+    </nav>
+
+    <section class="container mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 md:pr-10 mb-10 md:mb-0 text-center md:text-left">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-radha-900 leading-tight mb-4">Best <span class="text-radha-600">Radha Naam Jap Counter</span> App for Daily Bhakti</h2>
+            <p class="font-hindi text-3xl text-radha-800 mb-6">श्री राधा नाम की महिमा अपरंपार है।</p>
+            <p class="text-lg text-radha-800 mb-10 leading-relaxed">Experience divine Vrindavan peace by tracking your Radhe Radhe japa with this easy-to-use digital mala counter. Perfect mantra chanting tool for every devotee of Radha Rani.</p>
+            
+            <a href="https://play.google.com/store/apps/details?id=com.spiritual.japamala.tally.tasbih.chanting.counter" target="_blank" class="inline-flex items-center bg-radha-600 text-white px-8 py-4 rounded-full text-xl font-bold shadow-lg hover:bg-radha-700 hover:scale-105 transition-all duration-300">
+                <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M17.523 15.3l-2.038-1.173L12 11.235v6.52l3.485 2.012a2.31 2.31 0 0 0 3.19-.854 2.298 2.298 0 0 0-.152-2.613zM2.93 4.14a2.296 2.296 0 0 0-.152 2.613l2.038 1.172L8.3 11.235 4.815 13.26l-3.485 2.012A2.31 2.31 0 0 0 1.33 16.12a2.298 2.298 0 0 0 2.607-.152l12.18-7.03-3.485-2.012zm15.483 1.173l-3.485-2.012a2.31 2.31 0 0 0-3.19.854c-.2.348-.2.77 0 1.12L12 11.235zm-2.038-1.172L2.93 19.86l14.593-8.425z"></path></svg>
+                Download from Play Store
+            </a>
+        </div>
+        
+       <div class="max-w-sm mx-auto divine-border p-0 shadow-2xl bg-white overflow-hidden relative group transition-transform hover:scale-105">
+            <div class="relative flex items-center justify-center bg-black" style="aspect-ratio: 1 / 1;">
+                <video 
+                    id="radhaVideo"
+                    loop 
+                    playsinline 
+                    style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <source src="assets/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <div id="playOverlay" class="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer transition-opacity group-hover:bg-black/10">
+                    <button onclick="startVideoWithAudio()" class="bg-radha-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg transform transition active:scale-95">
+                        <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="bg-radha-100 py-3 border-t border-radha-200">
+                <p class="text-center text-radha-800 font-hindi font-bold text-base m-0 tracking-wide">राधा नाम की शक्ति: नाम जप विधि</p>
+            </div>
+        </div>
+
+    <script>
+        function startVideoWithAudio() {
+            const video = document.getElementById('radhaVideo');
+            const overlay = document.getElementById('playOverlay');
+            
+            video.muted = false; // Audio ON
+            video.play();
+            overlay.style.display = 'none'; // Button chhupao
+        }
+    </script>
+
+    </section>
+    
+
+    </section>
+
+    <section class="bg-radha-100 py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-4xl font-hindi font-bold text-radha-800 mb-6">नाम जप क्यों ज़रूरी है?</h3>
+            <p class="text-xl text-radha-900 max-w-3xl mx-auto mb-16 leading-relaxed">कलियुग में नाम जप ही सबसे सरल और प्रभावशाली साधन है भगवद प्राप्ति का। श्री राधा का नाम लेने से मन को अपार शांति और आनंद मिलता है।</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-radha-200 hover:border-radha-400 transition">
+                    <div class="bg-radha-50 p-4 rounded-full inline-block mb-6 text-radha-600">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-hindi font-semibold text-radha-800 mb-4">108 डिजिटल माला</h4>
+                    <p class="text-radha-900">108 मणियों की डिजिटल माला के साथ निर्बाध नाम जप करें, जैसे असली माला पर करते हैं।</p>
+                </div>
+                
+                <div class="bg-radha-900 text-white p-8 rounded-2xl shadow-xl divine-border transform scale-105 border-radha-600">
+                    <h4 class="text-2xl font-semibold mb-3">Live Jap Counter</h4>
+                    <div id="counterVisual" class="font-hindi text-6xl font-extrabold text-radha-400 mb-4 tracking-wider">०००१०८</div>
+                    <p class="text-radha-200 text-sm mb-6">Mantra counts completed this session</p>
+                    <p class="font-hindi text-lg text-radha-100">राधा नाम जप के लिए बना सर्वश्रेष्ठ काउंटर ऐप।</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-radha-200 hover:border-radha-400 transition">
+                    <div class="bg-radha-50 p-4 rounded-full inline-block mb-6 text-radha-600">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-hindi font-semibold text-radha-800 mb-4">प्रगति को ट्रैक करें</h4>
+                    <p class="text-radha-900">अपने दैनिक, साप्ताहिक और मासिक नाम जप रिकॉर्ड को सेव करें और भक्ति में आगे बढ़ें।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-6 py-20 text-center">
+        <h3 class="text-4xl font-hindi font-bold text-radha-800 mb-10">राधे राधे के साथ सभी मंत्रों का जप करें</h3>
+        <p class="text-lg text-radha-900 max-w-2xl mx-auto mb-16 leading-relaxed">This versatile counting tool works perfectly for other powerful mantras too, including the **Hare Krishna Maha Mantra**, Sita Ram japa, and generic meditation chanting.</p>
+        
+        <div class="flex flex-wrap justify-center gap-4 text-radha-800">
+            <span class="bg-white border border-radha-300 px-6 py-3 rounded-full font-semibold shadow text-xl font-hindi">हरे कृष्ण महा मंत्र</span>
+            <span class="bg-white border border-radha-300 px-6 py-3 rounded-full font-semibold shadow text-xl font-hindi">ओम नमः शिवाय</span>
+            <span class="bg-white border border-radha-300 px-6 py-3 rounded-full font-semibold shadow text-xl font-hindi">सीता राम नाम जप</span>
+            <span class="bg-white border border-radha-300 px-6 py-3 rounded-full font-semibold shadow text-xl font-hindi">गायत्री मंत्र</span>
+        </div>
+    </section>
+
+    <footer class="bg-radha-900 text-white py-16 mt-16 text-center border-t-4 border-radha-500">
+        <div class="container mx-auto px-6">
+            <img src="/assets/logo.jpg" alt="Radha Naam Jap App Logo" class="w-24 h-24 mx-auto rounded-3xl shadow-2xl divine-border p-1 bg-white mb-6">
+            <h5 class="text-3xl font-hindi font-bold mb-4">राधे राधे! भक्ति यात्रा शुरू करें।</h5>
+            <p class="text-radha-200 max-w-xl mx-auto mb-10 leading-relaxed">Download the **Radha Naam Jap Counter** app today and make your spiritual journey easy, peaceful, and organized.</p>
+            
+            <a href="https://play.google.com/store/apps/details?id=com.spiritual.japamala.tally.tasbih.chanting.counter" target="_blank" class="inline-flex items-center bg-radha-500 text-radha-900 px-8 py-4 rounded-full text-xl font-bold shadow-lg hover:bg-radha-400 hover:scale-105 transition-all duration-300">
+                Free App - Play Store Par Payein
+            </a>
+            
+            <p class="text-radha-400 mt-16 text-xs">© 2026 Radha Japa Tools Inc. India Focus. High Ranking SEO Page.</p>
+        </div>
+    </footer>
+
+    <script>
+        function createSnowflakes() {
+            const container = document.getElementById('snowflakeContainer');
+            const numberOfSnowflakes = 40;
+            for (let i = 0; i < numberOfSnowflakes; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                const size = Math.random() * 8 + 3 + 'px';
+                snowflake.style.width = size;
+                snowflake.style.height = size;
+                const colors = ['#ffffff', '#fffbeb', '#fde68a', '#f59e0b'];
+                snowflake.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                snowflake.style.animationDelay = Math.random() * 5 + 's';
+                snowflake.style.animationDuration = Math.random() * 7 + 6 + 's';
+                container.appendChild(snowflake);
+            }
+        }
+
+        function animateCounter() {
+            const counterElement = document.getElementById('counterVisual');
+            let count = 108;
+            setInterval(() => {
+                count++;
+                if (count > 999999) count = 108;
+                const paddedValue = String(count).padStart(6, '0');
+                counterElement.innerText = paddedValue;
+            }, 2500);
+        }
+
+        window.addEventListener('load', () => {
+            createSnowflakes();
+            animateCounter();
+        });
+    </script>
+</body>
+</html>
